@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang=en>
+
+    <head>
+        <meta charset=utf-8>
+        <title>CorossWord</title>
+        <meta content="width=device-width,initial-scale=1" name=viewport>
+        <link rel="stylesheet" href="../css/crossword.css">
+        <link href=https://use.typekit.net/sqg7qje.css rel=stylesheet>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1 class=title>
+                    CorossWord
+                </h1>
+            </div>
+        </header>
+        <main>
+            <div class=content>
+                <div class=root id=root style="display: none;">
+                    <div class=grid-container>
+                        <div class=grid-content
+                            id=crossword-svg-container></div>
+                    </div>
+                    <div class="clues">
+                        <h2 data-locid="across">Across</h2>
+                        <ol id="across-clues">
+                            <li value="4" class>Our company name, specializing
+                                in providing high-quality reagents and services
+                                for biological research.</li><li value="5"
+                                class>A large molecule made up of amino acids
+                                joined by peptide bonds.</li><li value="7">The
+                                basic unit of heredity that carries genetic
+                                information and determines traits.</li><li
+                                value="9">An enzyme that catalyzes the synthesis
+                                of long polymer chains of DNA or RNA. Crucial in
+                                DNA replication and PCR technology.</li><li
+                                value="11">A molecule that slows down or stops
+                                the activity of an enzyme, for example.</li>
+                        </ol>
+                        <h2 data-locid="down">Down</h2>
+                        <ol id="down-clues">
+                            <li value="1">The alleles or variants carried at a
+                                particular locus in the genome.</li><li
+                                value="2">A molecule that can be recognized and
+                                bound by antibodies or immune cells, usually
+                                from foreign substances or pathogens.</li><li
+                                value="3" class>A single-domain antibody
+                                fragment derived from camelids. Known for its
+                                stability and effectiveness in binding to
+                                antigens.</li><li value="6" class>A substance
+                                used in chemical or biological reactions, often
+                                to detect, measure, or create other
+                                substances.</li><li value="8">A Gram-negative
+                                model
+                                prokaryote commonly used in molecular biology
+                                research.</li><li value="10">An amplification
+                                method commonly used to determine [10].
+                                Abbr.</li>
+                        </ol>
+                    </div>
+                    <div class=message id=congrats-message>
+                        <div>
+                            <strong data-locid=congrats1></strong> <span
+                                data-locid=congrats2></span>
+                        </div>
+                    </div>
+                    <div class=message id=check-message>
+                        <div>
+                            <span data-locid=checkBefore></span> <span
+                                id=check-correct-words></span> <span
+                                data-locid=checkOf></span> <span
+                                id=check-word-count></span> <span
+                                data-locid=checkAfter></span>
+                        </div>
+                    </div>
+                    <div class=under-grid style="display: none;">
+                        <a id=solve-button><span data-locid=solve></span> <span
+                                id=solves-left></span></a>
+                    </div>
+                    <div class=under-clues>
+                        <a id=check-button><span data-locid=checkAnswers></span>
+                            <span id=checks-left></span></a>
+                    </div>
+                </div>
+                <div class=curtain id=curtain></div>
+                <div class=flexspacer></div>
+                <div class=mobile-pane id=mobile-pane>
+                    <div class=when-no-selection>
+                        <div class=title>
+                            <div class=menu-button id=mobile-pane-back><svg
+                                    height=42 width=32>
+                                    <path d=M18,14l-8,8l8,8m-8,-8h16 />
+                                </svg></div>
+                            <h1>
+                                CorossWord <span class=author><span
+                                        data-locid=by></span> Abasia</span>
+                            </h1>
+                        </div>
+                    </div>
+                    <p class="when-no-selection subtle">
+                        Abasia
+                    </p>
+                    <p class="when-no-selection commands">
+                        <a id=check-button-mobile><span
+                                data-locid=checkAnswers></span> <span
+                                id=checks-left-mobile></span></a>
+                    </p>
+
+                    <div class=when-has-selection>
+                        <div class=mobile-clue>
+                            <p id=clue-mobile></p>
+                            <input id=entry-box-mobile type=text title="n">
+                            <div class=commands>
+                                <div class=error-indicator
+                                    id=letter-count-area-mobile><span
+                                        id=letter-count-mobile></span> <span
+                                        data-locid=letters></span></div>
+                                <a id=solve-button-mobile><span
+                                        data-locid=solve></span> <span
+                                        id=solves-left-mobile></span></a>
+                                <div class=flexspacer></div>
+                                <a id=close-clue-button-mobile
+                                    data-locid=close></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="../js/sweetalert2-11.10.8.js"></script>
+        <script>
+        function hasClass() {
+            try {
+                return !!eval("async()=>1;class x{}") && !navigator.userAgent.includes("Edge")
+            } catch (e) {
+                return !1
+            }
+        }
+        hasClass() ? document.getElementById("root").style.display = "" : (document.getElementById("no-class").style.display = "")
+    </script>
+        <script src="../js/crossword.js"></script>
+        <script>
+        F({"version":1,"shareID":"390163d4","language":"en","title":"crossWord","words":[{"x":1,"y":6,"direction":0,"length":7,"hash":49013033},{"x":1,"y":4,"direction":0,"length":6,"hash":12274312},{"x":0,"y":10,"direction":0,"length":10,"hash":52211737},{"x":3,"y":12,"direction":0,"length":9,"hash":26149374},{"x":8,"y":7,"direction":0,"length":4,"hash":88420463},{"x":3,"y":3,"direction":1,"length":8,"hash":11998360},{"x":1,"y":8,"direction":1,"length":5,"hash":40481945},{"x":9,"y":6,"direction":1,"length":7,"hash":21926698},{"x":5,"y":1,"direction":1,"length":7,"hash":65148806},{"x":11,"y":0,"direction":1,"length":8,"hash":32394553},{"x":11,"y":10,"direction":1,"length":3,"hash":45773961}],"rtl":false,"checks":true,"solves":false})
+    </script>
+    </body>
+
+</html>
